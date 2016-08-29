@@ -1,0 +1,24 @@
+From 48ee48cf340ac958d69cde25cdc7bdd0b7c5000f Mon Sep 17 00:00:00 2001
+From: witokondoria <witokondoria@gmail.com>
+Date: Sun, 24 Jul 2016 20:10:48 +0200
+Subject: [PATCH] force rgb
+
+---
+ drivers/amlogic/hdmi/hdmi_tx_20/hdmi_tx_video.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/amlogic/hdmi/hdmi_tx_20/hdmi_tx_video.c b/drivers/amlogic/hdmi/hdmi_tx_20/hdmi_tx_video.c
+index e113824..c83a3ab 100755
+--- a/drivers/amlogic/hdmi/hdmi_tx_20/hdmi_tx_video.c
++++ b/drivers/amlogic/hdmi/hdmi_tx_20/hdmi_tx_video.c
+@@ -36,7 +36,7 @@
+ #include <linux/amlogic/hdmi_tx/hdmi_tx_module.h>
+ #include <linux/amlogic/hdmi_tx/hdmi_tx_compliance.h>
+
+-static unsigned char hdmi_output_rgb;
++static unsigned char hdmi_output_rgb = 1;
+ static void hdmitx_set_spd_info(struct hdmitx_dev *hdmitx_device);
+ static void hdmi_set_vend_spec_infofram(struct hdmitx_dev *hdmitx_device, enum hdmi_vic VideoCode);
+
+-- 
+2.7.4
